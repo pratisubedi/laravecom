@@ -122,5 +122,11 @@ class AdminController extends Controller
                 return redirect()->route('admin.forgot-password');
             }
         }
-
+        public function profileView(Request $request){
+            $admin=null;
+            if(Auth::guard('admin')->check()){
+                $admin = Admin::findOrfail(auth()->id());
+            }
+            return view('back.pages.admin.profile', compact('admin'));
+        }
 }

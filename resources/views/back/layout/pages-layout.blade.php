@@ -250,7 +250,7 @@
 						<div
 							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
 						>
-							<a class="dropdown-item" href="profile.html"
+							<a class="dropdown-item" href="{{route('admin.profile')}}"
 								><i class="dw dw-user1"></i> Profile</a
 							>
 							<a class="dropdown-item" href="profile.html"
@@ -516,7 +516,7 @@
 								</li>
 								<li>
 									<a
-										href=""
+										href="{{route('admin.profile')}}"
 										target="_blank"
 										class="dropdown-toggle no-arrow"
 									>
