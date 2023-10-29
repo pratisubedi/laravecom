@@ -45,6 +45,7 @@
 		/>
 		<link rel="stylesheet" type="text/css" href="/back/vendors/styles/style.css" />
 		<link rel="stylesheet" href="/extra-assets/ijabo/ijabo.min.css">
+		@livewireStyles
         @stack('stylesheets')
 	</head>
 	<body class="login-page">
@@ -203,6 +204,7 @@
 		</script>
 		<script src="/extra-assets/ijabo/ijabo.min.js"></script>
 		<script src="/extra-assets/ijabo/jquery.ijabo.min.js"></script>
+		@livewireScripts
         @stack('scripts')
         
 	</body>
