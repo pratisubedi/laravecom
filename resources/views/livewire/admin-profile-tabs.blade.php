@@ -17,7 +17,38 @@
                 <!-- Timeline Tab start -->
                 <div class="tab-pane fade {{$tab =='personal_details' ? 'active show':''}}" id="personal_details" role="tabpanel">
                     <div class="pd-20">
-                        -------Personal Details here--------
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for=" ">Name</label>
+                                        <input type="text" class="form-control" wire:model='name' placeholder="Enter full name">
+                                        @error('name')
+                                            <span class="text-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for=" ">Email</label>
+                                        <input type="text" class="form-control" wire:model='email' placeholder="Enter email">
+                                        @error('email')
+                                            <span class="text-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for=" ">Username</label>
+                                        <input type="text" class="form-control" wire:model='username' placeholder="Enter username">
+                                        @error('username')
+                                            <span class="text-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Save Changes</button>
+                        </form>
                     </div>
                 </div>
                 <!-- Timeline Tab End -->
