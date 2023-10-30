@@ -40,3 +40,13 @@
         </div>
     </div>
 @endsection
+@push('scripts')
+    <script>
+        //For auto update
+        window.addEventListner('updateAdminInfo', function(event){
+            $('#adminProfileName').html(event.detail.adminName);
+            $('#adminProfileEmail').html(event.detail.adminEmail);
+        })
+    </script>
+    
+@endpush
