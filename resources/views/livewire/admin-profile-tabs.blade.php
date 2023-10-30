@@ -17,7 +17,7 @@
                 <!-- Timeline Tab start -->
                 <div class="tab-pane fade {{$tab =='personal_details' ? 'active show':''}}" id="personal_details" role="tabpanel">
                     <div class="pd-20">
-                        <form action="">
+                        <form wire:submit.prevent='updatetAdminPersonalDetails()'>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
