@@ -44,11 +44,11 @@
 @push('scripts')
     <script>
         //For auto update
-        window.addEventListner('updateAdminInfo', function(event){
+        window.addEventListener('updateAdminInfo', function(event){
             $('#adminProfileName').html(event.detail.adminName);
             $('#adminProfileEmail').html(event.detail.adminEmail);
         });
-//for uploading file 
+        //for uploading file 
         $('input[type="file"][name="adminProfilePictureFile"][id="adminProfilePictureFile"]').ijaboCropTool({
           preview : '#adminProfilePictureFile',
           setRatio:1,
@@ -65,5 +65,4 @@
           }
        });
     </script>
-    
 @endpush
