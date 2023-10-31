@@ -38,8 +38,8 @@ class AdminProfileTabs extends Component
                     'email'=>$this->email,
                     'username'=>$this->username
                 ]);
-        $this->emit('updateAdminSellerHeaderInfo');
         //For auto Update 
+        $this->dispatch('updateAdminSellerHeaderInfo');
         $this->dispatchBrowserEvent('updateAdminInfo',[
             'adminName'=>$this->name,
             'adminEmail'=>$this->email
