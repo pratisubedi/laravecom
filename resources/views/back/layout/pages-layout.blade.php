@@ -44,7 +44,7 @@
 			href="/back/vendors/styles/icon-font.min.css"
 		/>
 		<link rel="stylesheet" type="text/css" href="/back/vendors/styles/style.css" />
-
+		<link rel="stylesheet" href="/extra-assets/ijaboCropTool/ijaboCropTool.min.css">
 	
 		<script>
 			(function (w, d, s, l, i) {
@@ -520,6 +520,7 @@
 		<script src="/back/vendors/scripts/layout-settings.js"></script>
 		<script src="/extra-assets/ijabo/ijabo.min.js"></script>
 		<script src="/extra-assets/ijabo/jquery.ijabo.min.js"></script>
+		<script src="/extra-assets/ijaboCropTool/ijaboCropTool.min.js"></script>
 		<script>
 			window.addEventListener('showToastr',function(event){
 				toastr.remove();
