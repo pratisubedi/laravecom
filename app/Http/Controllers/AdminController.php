@@ -48,7 +48,7 @@ class AdminController extends Controller
             session()->flash('fail','Incorrect user/email or password');
                 return redirect()->route('admin.login');
             }
-  }
+    }
   
   public function logoutHandler(Request $request){
     Auth::guard('admin')->logout();
@@ -135,7 +135,7 @@ class AdminController extends Controller
             $admin = Admin::findOrfail(auth()->id());
             $path='images/users/adminis';
             $file=$request->file('adminProfilePictureFile');
-            $old_picture=$admin->getAttribute()['picture'];
+            $old_picture = $admin->picture;
             $file_path=$path.$old_picture;
             $filename='Admin_IMG'.rand(2,1000).$admin->id.time().uniqid().'.jpg';
 
