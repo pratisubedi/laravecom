@@ -131,8 +131,18 @@ class AdminController extends Controller
             return view('back.pages.admin.profile', compact('admin'));
         }
 
-        public function changeProfilePicture(Request $request){
-            
+        public function changeProfilePicture(Request $request, $id){
+            // dd($request->all());
+            if(Auth::guard('admin')->check()){
+                $admin = Admin::findOrfail(auth()->id());
+            }
+            $oldImage=$admin->image;
+            if(File::exists(public_path('/images/admins'.$oldImage))){
+                File::delete(public_path('/images/admins'.$oldImage));
+                //File::delete(public_path('storage/' . $oldImagePath));
+            }
+            $newImage = time().'.'.$request->adminProfilePictureFile->extension();
+            dd($newImage);
         }
 
 }

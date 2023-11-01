@@ -18,7 +18,7 @@ Route::prefix("admin")->name("admin.")->group(function () {
         Route::view("/home","back.pages.admin.home")->name("home");
         Route::post("/logut_handler",[AdminController::class,"logoutHandler"])->name('logout_handler');
         Route::get('/profile',[AdminController::class,'profileView'])->name('profile');
-        Route::get('/change-profile-picture',[AdminController::class,'changeProfilePicture'])->name('change-profile-picture');
+        Route::get('/change-profile-picture/{id}',[AdminController::class,'changeProfilePicture'])->name('change-profile-picture');
     });
 
 });

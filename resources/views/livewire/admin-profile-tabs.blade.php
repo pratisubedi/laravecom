@@ -54,8 +54,39 @@
                 <!-- Timeline Tab End -->
                 <!-- Tasks Tab start -->
                 <div class="tab-pane fade {{$tab =='update_password' ? 'active show':''}}" id="update_password" role="tabpanel">
-                    <div class="pd-20 profile-task-wrap">
-                        ----Update password here-----
+                    <div class="pd-20profile-task-wrap ">
+                       <form wire:submit.prevent='updatePassword()'>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="">Current Passwoord</label>
+                                        <input class="form-control" type="password" placeholder="Enter Current Password" wire:model.defer='current_password'>
+                                        @error('current_password')
+                                            <span class="textt-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="">New Passwoord</label>
+                                        <input class="form-control" type="password" placeholder="Enter new Password" wire:model.defer='new_password'>
+                                        @error('new_password')
+                                            <span class="textt-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="">Confirm New Passwoord</label>
+                                        <input class="form-control" type="password" placeholder="Retype new Password" wire:model.defer='confirm_password'>
+                                        @error('confirm_password')
+                                            <span class="textt-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Password</button>
+                       </form>
                     </div>
                 </div>
             </div>

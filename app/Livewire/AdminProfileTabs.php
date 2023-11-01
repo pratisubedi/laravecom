@@ -6,6 +6,8 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminProfileTabs extends Component
 {
@@ -16,14 +18,16 @@ class AdminProfileTabs extends Component
     public function selectTab($tab){
         $this->tab=$tab;
     }
-    public function mount(){
-        $this->tab=request()->tab ? request()->tab(): $this->tabname;
-        if(Auth::guard('admin')->check()){
-            $admin=Admin::findOrFail(auth()->id());
-            $this->admin_id=$admin->id;
-            $this->name=$admin->name;
-            $this->email=$admin->email;
-            $this->username=$admin->username;
+    public function mount()
+    {
+        $this->tab = request()->exists('tab') ? request()->tab() : $this->tabname;
+
+        if (Auth::guard('admin')->check()) {
+            $admin = Admin::findOrFail(auth()->id());
+            $this->admin_id = $admin->id;
+            $this->name = $admin->name;
+            $this->email = $admin->email;
+            $this->username = $admin->username;
         }
     }
     public function updatetAdminPersonalDetails(){
@@ -60,8 +64,22 @@ class AdminProfileTabs extends Component
         'data' => $data,
     ]);
 }
+    public function updatePassword(){
+        $this->validate([
+            'current_password'=>[
+                'required',function($attribute, $value, $fail) {
+                    if(!Hash::check($value, Admin::find(auth('admin')->id())->password)){
+                        return $fail(__('The Current password is incorrect'));
+                    }
+                }
+            ],
+            'new_password'=>'required|min:2|max:45|confirmed'
+        ]);
+        dd('ok.validate');
+    }
     public function render()
     {
         return view('livewire.admin-profile-tabs');
     }
+
 }

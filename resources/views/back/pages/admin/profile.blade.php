@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="row">
-        <form action="{{route('admin.change-profile-picture')}}" enctype="multipart/form-data">
+        <form action="{{route('admin.change-profile-picture',['id'=>$admin->id])}}" enctype="multipart/form-data">
             @method('PUT')
             @csrf
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
@@ -53,21 +53,6 @@
             $('#adminProfileName').html(event.detail.adminName);
             $('#adminProfileEmail').html(event.detail.adminEmail);
         });
-        //for uploading file 
-        // $('input[type="file"][name="adminProfilePictureFile"][id="adminProfilePictureFile"]').ijaboCropTool({
-        //   preview : '#adminProfilePictureFile',
-        //   setRatio:1,
-        //   allowedExtensions: ['jpg', 'jpeg','png'],
-        //   buttonsText:['CROP','QUIT'],
-        //   buttonsColor:['#30bf7d','#ee5155', -15],
-        //   processUrl:'{{route("admin.change-profile-picture")}}',
-        //   withCSRF:['_token','{{ csrf_token() }}'],
-        //   onSuccess:function(message, element, status){
-        //      alert(message);
-        //   },
-        //   onError:function(message, element, status){
-        //     alert(message);
-        //   }
-    //    });
+
     </script>
 @endpush
