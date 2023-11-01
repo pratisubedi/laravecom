@@ -17,7 +17,56 @@
         <div class="tab-content">
             <div class="tab-pane fade {{$tab=='general_settings' ? 'active show' :''}}" id="general_settings" role="tabpanel">
                 <div class="pd-20">
-                    -------General Setting----
+                    <form wire:submit.prevent='updateGeneralSettings()'>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for=""><b>Site Name</b></label>
+                                    <input type="text" name="sitename" id="" class="form-control" placeholder="Enter Site"
+                                    wire:model.defer='site_name'>
+                                    @error('site_name')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for=""><b>Site Email</b></label>
+                                    <input type="text" name="siteemail" id="" class="form-control" placeholder="Enter Site email"
+                                    wire:model.defer='site_email'>
+                                    @error('site_email')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for=""><b>Site Phone</b></label>
+                                    <input type="text" name="sitephone" id="" class="form-control" placeholder="Enter Site"
+                                    wire:model.defer='site_phone'>
+                                    @error('site_phone')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for=""><b>Site meta keywords</b><small> Separated by comma (a,b,c)</small></label>
+                                    <input type="text" name="siteemail" id="" class="form-control" placeholder="Enter Site meta keywords"
+                                    wire:model.defer='site_meta_keywords'>
+                                    @error('site_meta_keywords')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Site meta Description</label>
+                            <textarea  cols="4" rows="4" placeholder="Site meta desc......" class="form-control" wire:model.defer='site_meta_description'></textarea>
+                            @error('site_meta_description')
+                                        <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
                 </div>
             </div>
             <div class="tab-pane fade {{$tab=='logo_favicon' ? 'active show' :''}}" id="logo_favicon" role="tabpanel">
