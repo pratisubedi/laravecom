@@ -442,13 +442,7 @@
 										<span class="micon bi bi-receipt-cutoff"></span
 										><span class="mtext">Invoice</span>
 									</a>
-								</li>
-								<li>
-									<div class="dropdown-divider"></div>
-								</li>
-								<li>
-									<div class="sidebar-small-cap">Setting</div>
-								</li>
+								</li>	
 								<li>
 									<a
 										href="{{route('admin.profile')}}"
@@ -457,6 +451,12 @@
 									>
 										<span class="micon fa fa-user"></span>
 										<span class="mtext">Profile</span>
+									</a>
+								</li>
+								<li>
+									<a href="{{route('admin.settings')}}" class="dropdown-toggle no-arrow {{Route::is('admin.settings') ? 'active':''}}">
+										<span class="micon icon-copy fi-widget"></span
+										><span class="mtext">Setting</span>
 									</a>
 								</li>
 						@else
