@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Illuminate\Console\View\Components\Alert;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
@@ -15,6 +16,7 @@ class AdminProfileTabs extends Component
     public $tabname='personal_details';
     protected $queryString= ['tab'];
     public $name, $email,$username,$admin_id;
+    public $current_password,$new_password,$confirm_password;
     public function selectTab($tab){
         $this->tab=$tab;
     }
@@ -73,9 +75,19 @@ class AdminProfileTabs extends Component
                     }
                 }
             ],
-            'new_password'=>'required|min:2|max:45|confirmed'
+            'new_password'=>'required|min:2|max:45',
         ]);
-        dd('ok.validate');
+        $query=Admin::findOrFail(auth('admin')->id())
+        ->update([
+            'password'=>Hash::make($this->new_password),
+        ]);
+        if($query){
+            $this->current_password=$this->new_password=$this->confirm_password=null;
+            $this->showToastr('success','Password successfull changed');
+            //session()->flash('success','updated password');
+        }else{
+            $this->alert('Something went to wrong');
+        }
     }
     public function render()
     {

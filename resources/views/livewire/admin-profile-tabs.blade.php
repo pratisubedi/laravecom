@@ -62,7 +62,7 @@
                                         <label for="">Current Passwoord</label>
                                         <input class="form-control" type="password" placeholder="Enter Current Password" wire:model.defer='current_password'>
                                         @error('current_password')
-                                            <span class="textt-danger">{{$message}}</span>
+                                            <span class="text-danger">{{$message}}</span>
                                         @enderror
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                         <label for="">New Passwoord</label>
                                         <input class="form-control" type="password" placeholder="Enter new Password" wire:model.defer='new_password'>
                                         @error('new_password')
-                                            <span class="textt-danger">{{$message}}</span>
+                                            <span class="text-danger">{{$message}}</span>
                                         @enderror
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@
                                         <label for="">Confirm New Passwoord</label>
                                         <input class="form-control" type="password" placeholder="Retype new Password" wire:model.defer='confirm_password'>
                                         @error('confirm_password')
-                                            <span class="textt-danger">{{$message}}</span>
+                                            <span class="text-danger">{{$message}}</span>
                                         @enderror
                                     </div>
                                 </div>
