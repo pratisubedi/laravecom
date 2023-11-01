@@ -25,53 +25,37 @@
         <div class="tab">
             <ul class="nav nav-tabs customtab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#home2" role="tab" aria-selected="true">Home</a>
+                    <a class="nav-link active" data-toggle="tab" href="#general_settings" role="tab" aria-selected="true">General Settings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#profile2" role="tab" aria-selected="false">Profile</a>
+                    <a class="nav-link" data-toggle="tab" href="#logo_favicon" role="tab" aria-selected="false">Logo & Favicon</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#contact2" role="tab" aria-selected="false">Contact</a>
+                    <a class="nav-link" data-toggle="tab" href="#social_networks" role="tab" aria-selected="false">Social Networks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#payment_methods" role="tab" aria-selected="false">Payment Methods</a>
                 </li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane fade show active" id="home2" role="tabpanel">
+                <div class="tab-pane fade show active" id="general_settings" role="tabpanel">
                     <div class="pd-20">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                        -------General Setting----
                     </div>
                 </div>
-                <div class="tab-pane fade" id="profile2" role="tabpanel">
+                <div class="tab-pane fade" id="logo_favicon" role="tabpanel">
                     <div class="pd-20">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                        -----Logo & Favicon--
                     </div>
                 </div>
-                <div class="tab-pane fade" id="contact2" role="tabpanel">
+                <div class="tab-pane fade" id="social_networks" role="tabpanel">
                     <div class="pd-20">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                        -----Social Networks-----
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="payment_methods" role="tabpanel">
+                    <div class="pd-20">
+                        -----Payment Methods-----
                     </div>
                 </div>
             </div>
