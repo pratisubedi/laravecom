@@ -131,25 +131,6 @@ class AdminController extends Controller
             return view('back.pages.admin.profile', compact('admin'));
         }
 
-        public function changeProfilePicture(Request $request){ 
-            $admin = Admin::findOrfail(auth()->id());
-            $path='images/users/adminis';
-            $file=$request->file('adminProfilePictureFile');
-            $old_picture = $admin->picture;
-            $file_path=$path.$old_picture;
-            $filename='Admin_IMG'.rand(2,1000).$admin->id.time().uniqid().'.jpg';
+        public function changeProfilePicture(Request $request){}
 
-            $upload= $file->move(public_path($path), $filename);
-
-            if($upload){
-                if($old_picture != null && File::exists(public_path($path.$old_picture))){
-                    File::delete(public_path($path.$old_picture));
-                }else{
-                    $admin->update(['picture'=>$filename]);
-                    return response()->json(['status'=>1,'msg'=> 'your profile picture is upadated']);
-                }
-            }else{
-                return response()->json(['status'=>0,'msg'=>'Something went to wrong.']);
-            }
-        }
 }
