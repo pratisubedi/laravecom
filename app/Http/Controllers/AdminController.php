@@ -131,6 +131,8 @@ class AdminController extends Controller
             return view('back.pages.admin.profile', compact('admin'));
         }
 
-        public function changeProfilePicture(Request $request){}
+        public function changeProfilePicture(Request $request){
+            
+        }
 
 }
