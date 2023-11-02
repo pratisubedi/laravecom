@@ -77,7 +77,7 @@
                             <div class="mb-2 mt-1" style="max-width: 200px">
                               <img wire:ignore src="" class="img-thubnail" data-ijabo-default-img="/images/site/{{$site_logo}}" id="site_logo_image_preview">
                             </div>
-                        <form action="" method="POST" enctype="multipart/form-data"
+                        <form action="{{route('admin.change-logo')}}" method="POST" enctype="multipart/form-data"
                             id="change_site_logo_form">
                             @csrf
                             <div class="col-md-6">
@@ -89,8 +89,8 @@
                                 <input type="file" name="site_logo" id="site_logo" class="form-control">
                                 <span class="text-danger error-text site_logo_error"></span>
                             </div>
+                            <button type="submit" class="btn btn-primary">Change Logo</button>
                         </form>
-                            
                         </div>
                         <div class="col-md-6">
                             
