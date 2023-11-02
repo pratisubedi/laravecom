@@ -26,18 +26,21 @@
 @endsection  
 @push('scripts')
     <script>
-        $('input[type="file"][name="site_logo"][id="site_logo"]').ijabo({
-            preview:'#site_logo_image_preview',
-            imageShape:'rectangular',
-            allowedExtensions:['png','jpg'],
-            onErrorShape:function(message,element){
-                alert('message');
-            },
-            onInvalidType:function(message,element){
-                alert('message')
-            },
-            onSuccess:function(message,element){}
-        });
+        // $('input[type="file"][name="site_logo"][id="site_logo"]').ijabo({
+        //     preview:'#site_logo_image_preview',
+        //     imageShape:'rectangular',
+        //     allowedExtensions:['png','jpg'],
+        //     onErrorShape:function(message,element){
+        //         alert('message');
+        //     },
+        //     onInvalidType:function(message,element){
+        //         alert('message')
+        //     },
+        //     onSuccess:function(message,element){}
+        // });
+        var selDiv="";
+        var storedFiles=[];
+        
         
     </script>
 @endpush

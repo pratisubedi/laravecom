@@ -80,6 +80,11 @@
                         <form action="" method="POST" enctype="multipart/form-data"
                             id="change_site_logo_form">
                             @csrf
+                            <div class="col-md-6">
+                                <div class="mb-2" id="selectedBanner">
+                            
+                                </div>
+                            </div>
                             <div class="mb-2">
                                 <input type="file" name="site_logo" id="site_logo" class="form-control">
                                 <span class="text-danger error-text site_logo_error"></span>
@@ -106,3 +111,19 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const siteLogoInput = document.getElementById("site_logo");
+        const siteLogoImagePreview = document.getElementById("site_logo_image_preview");
+
+        siteLogoInput.addEventListener("change", function (e) {
+            const selectedFile = e.target.files[0];
+
+            if (selectedFile) {
+                const objectURL = URL.createObjectURL(selectedFile);
+                siteLogoImagePreview.src = objectURL;
+            }
+        });
+    });
+
+</script>
