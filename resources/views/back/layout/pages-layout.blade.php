@@ -418,7 +418,7 @@
 				<a href="index.html">
 					<img src="/images/site/{{get_settings()->site_logo}}" alt="" class="dark-logo" />
 					<img
-						src="/back/vendors/images/deskapp-logo-white.svg"
+						src="/images/site/{{get_settings()->site_logo}}"
 						alt=""
 						class="light-logo"
 					/>
