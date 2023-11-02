@@ -71,7 +71,26 @@
             </div>
             <div class="tab-pane fade {{$tab=='logo_favicon' ? 'active show' :''}}" id="logo_favicon" role="tabpanel">
                 <div class="pd-20">
-                    -----Logo & Favicon--
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Site Logo</h5>
+                            <div class="mb-2 mt-1" style="max-width: 200px">
+                              <img wire:ignore src="" class="img-thubnail" data-ijabo-default-img="/images/site/{{$site_logo}}">
+                            </div>
+                        <form action="" method="POST" enctype="multipart/form-data"
+                            id="change_site_logo_form">
+                            @csrf
+                            <div class="mb-2">
+                                <input type="file" name="site_logo" id="site_logo" class="form-control">
+                                <span class="text-danger error-text site_logo_error"></span>
+                            </div>
+                        </form>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="tab-pane fade {{$tab=='social_networks' ? 'active show' :''}}" id="social_networks" role="tabpanel">
