@@ -416,7 +416,7 @@
 		<div class="left-side-bar">
 			<div class="brand-logo">
 				<a href="index.html">
-					<img src="/back/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
+					<img src="/images/site/{{get_settings()->site_logo}}" alt="" class="dark-logo" />
 					<img
 						src="/back/vendors/images/deskapp-logo-white.svg"
 						alt=""
