@@ -26,7 +26,7 @@
 @endsection  
 @push('scripts')
     <script>
-        $('input[type="file"][name="site_logo"][id="site_logo"]').ijaboViwer({
+        $('input[type="file"][name="site_logo"][id="site_logo"]').ijabo({
             preview:'#site_logo_image_preview',
             imageShape:'rectangular',
             allowedExtensions:['png','jpg'],
