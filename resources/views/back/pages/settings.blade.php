@@ -24,3 +24,20 @@
         @livewire('admin-setting')
     </div>
 @endsection  
+@push('scripts')
+    <script>
+        $('input[type="file"][name="site_logo"][id="site_logo"]').ijaboViwer({
+            preview:'#site_logo_image_preview',
+            imageShape:'rectangular',
+            allowedExtensions:['png','jpg'],
+            onErrorShape:function(message,element){
+                alert('message');
+            },
+            onInvalidType:function(message,element){
+                alert('message')
+            },
+            onSuccess:function(message,element){}
+        });
+        
+    </script>
+@endpush

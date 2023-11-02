@@ -75,7 +75,7 @@
                         <div class="col-md-6">
                             <h5>Site Logo</h5>
                             <div class="mb-2 mt-1" style="max-width: 200px">
-                              <img wire:ignore src="" class="img-thubnail" data-ijabo-default-img="/images/site/{{$site_logo}}">
+                              <img wire:ignore src="" class="img-thubnail" data-ijabo-default-img="/images/site/{{$site_logo}}" id="site_logo_image_preview">
                             </div>
                         <form action="" method="POST" enctype="multipart/form-data"
                             id="change_site_logo_form">
