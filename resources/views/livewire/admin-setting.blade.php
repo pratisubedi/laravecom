@@ -126,4 +126,9 @@
         });
     });
 
+    $('#change_site_logo_form').on('submit',function(e){
+        e.preventDefault();
+        alert('....submimt....');
+    });
+
 </script>

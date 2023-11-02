@@ -25,7 +25,7 @@
     </div>
 @endsection  
 @push('scripts')
-    <script>
+    {{-- <script>
         // $('input[type="file"][name="site_logo"][id="site_logo"]').ijabo({
         //     preview:'#site_logo_image_preview',
         //     imageShape:'rectangular',
@@ -38,9 +38,23 @@
         //     },
         //     onSuccess:function(message,element){}
         // });
-        var selDiv="";
-        var storedFiles=[];
         
-        
+            
+    </script> --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const siteLogoInput = document.getElementById("site_logo");
+            const siteLogoImagePreview = document.getElementById("site_logo_image_preview");
+    
+            siteLogoInput.addEventListener("change", function (e) {
+                const selectedFile = e.target.files[0];
+    
+                if (selectedFile) {
+                    const objectURL = URL.createObjectURL(selectedFile);
+                    siteLogoImagePreview.src = objectURL;
+                }
+            });
+        });
+    
     </script>
 @endpush

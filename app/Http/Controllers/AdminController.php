@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\File;
+use App\Models\GeneralSetting;
 
 class AdminController extends Controller
 {
@@ -143,6 +144,9 @@ class AdminController extends Controller
             }
             $newImage = time().'.'.$request->adminProfilePictureFile->extension();
             dd($newImage);
+        }
+        public function changeLogo(Request $request){
+            echo"hello";
         }
 
 }
