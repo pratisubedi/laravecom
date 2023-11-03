@@ -122,6 +122,56 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for=""><b>Twitter URL</b></label>
+                                    <input type="text"  class="form-control" wire:model.defer='twitter_url' placeholder="Enter twitter URL">
+                                    @error('twitter_url')
+                                        {{$message}}
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for=""><b>Instagram URL</b></label>
+                                    <input type="text"  class="form-control" wire:model.defer='instagram_url' placeholder="Enter facebook URL">
+                                    @error('instagram_url')
+                                        {{$message}}
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for=""><b>YouTube URL</b></label>
+                                    <input type="text"  class="form-control" wire:model.defer='youtube_url' placeholder="Enter youtube URL">
+                                    @error('youtube_url')
+                                        {{$message}}
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for=""><b>GitHub URL</b></label>
+                                    <input type="text"  class="form-control" wire:model.defer='github_url' placeholder="Enter github URL">
+                                    @error('github_url')
+                                        {{$message}}
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for=""><b>Linkedin URL</b></label>
+                                    <input type="text"  class="form-control" wire:model.defer='linkedin_url' placeholder="Enter linkedin URL">
+                                    @error('linkedin_url')
+                                        {{$message}}
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
                     </form>
                 </div>
