@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('social_networks', function (Blueprint $table) {
             $table->id();
+            $table->string('facebook_url')->nullable();
+            $table->string('youtube_url')->nullable();
+            $table->string('twitter_url')->nullable();
+            $table->string('github_url')->nullable();
+            $table->string('instagram_url')->nullable();
+            $table->string('inkedin_url')->nullable();
             $table->timestamps();
         });
     }
