@@ -111,7 +111,19 @@
             </div>
             <div class="tab-pane fade {{$tab=='social_networks' ? 'active show' :''}}" id="social_networks" role="tabpanel">
                 <div class="pd-20">
-                    -----Social Networks-----
+                    <form wire:submit.prevent='updateSocialNetworks()'>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for=""><b>Facebook URL</b></label>
+                                    <input type="text"  class="form-control" wire:model.defer='facebook_url' placeholder="Enter facebook URL">
+                                    @error('facebook_url')
+                                        {{$message}}
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="tab-pane fade {{$tab=='payment_methods' ? 'active show' :''}}" id="payment_methods" role="tabpanel">
