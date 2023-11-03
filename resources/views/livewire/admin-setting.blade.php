@@ -93,7 +93,10 @@
                         </form>
                         </div>
                         <div class="col-md-6">
-                            
+                            <h5>Site Favicon</h5>
+                            <div class="mb-2 mt-1" style="max-width: 100px">
+                                <img src="" alt="" class="img-thumbnail" id="site_favicon_image_preview" data-ijabo-default-img="/images/site/{{$site_favicon}}">
+                            </div>
                         </div>
                     </div>
                 </div>
