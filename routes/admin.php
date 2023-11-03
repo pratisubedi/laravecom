@@ -21,6 +21,7 @@ Route::prefix("admin")->name("admin.")->group(function () {
         Route::get('/change-profile-picture/{id}',[AdminController::class,'changeProfilePicture'])->name('change-profile-picture');
         Route::view('/settings','back.pages.settings')->name('settings');
         Route::post('/change-logo',[AdminController::class,'changeLogo'])->name('change-logo');
+        Route::post('/change-favicon',[AdminController::class,'changeFavicon'])->name('change-favicon');
     });
 
 });
