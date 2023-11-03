@@ -10,7 +10,7 @@
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
-			href="/back/vendors/images/apple-touch-icon.png"
+			href="/images/site/{{get_settings()->site_favicon}}"
 		/>
 		<link
 			rel="icon"

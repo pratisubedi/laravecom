@@ -136,6 +136,19 @@
             }
         });
     });
+    document.addEventListener("DOMContentLoaded", function () {
+        const siteLogoInput = document.getElementById("site_favicon");
+        const siteLogoImagePreview = document.getElementById("site_favicon_image_preview");
+
+        siteLogoInput.addEventListener("change", function (e) {
+            const selectedFile = e.target.files[0];
+
+            if (selectedFile) {
+                const objectURL = URL.createObjectURL(selectedFile);
+                siteLogoImagePreview.src = objectURL;
+            }
+        });
+    });
 
     $('#change_site_logo_form').on('submit',function(e){
         e.preventDefault();
