@@ -3,6 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;  
 use App\Models\GeneralSetting;
+use App\Models\SocialNetwork;
 /**SEND MAIL FUNCTION USING PHPMAILER LIBAR */
 
 if (!function_exists("sendEmail")) {
@@ -49,6 +50,30 @@ if(!function_exists('get_settings')){
             ]);
             $new_settings_data=$settings->first();
             $result=$new_settings_data;
+        }
+        return $results;
+    }
+}
+
+/*--------------get  social Networks--------*/
+if(!function_exists('get_social_network')){
+    function get_social_network(){
+        $results=null;
+        $social_network= new SocialNetwork();
+        $social_network_data=$social_network->first();
+        if($social_network_data){
+            $results=$social_network_data;
+        }else{
+            $social_network->insert([
+                'facebook_url'=>'https://www.facebook.com/shankarsubedi8/',
+                'instagram_url'=>'https://www.instagram.com/accounts/login/?hl=en',
+                'twitter_url'=>'https://www.twitter.com',
+                'github_url'=>'github.com',
+                'youtube_url'=>'youtube.com',
+                'linkedin_url'=>'linkedin.com'
+            ]);
+            $new_social_network_data=$social_network->first();
+            $results=$new_social_network_data;
         }
         return $results;
     }
